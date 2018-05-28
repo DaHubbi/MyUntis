@@ -31,3 +31,24 @@ body {
     padding: 10px;
     margin: 10px 0;
 }
+
+table, th, td {
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+    padding: 0px;
+}
+
+.bottom {
+    font-size: 11px;
+    margin-left: 10px;
+    float: right;
+}
+
+.table-time {
+    padding: 0px;
+    margin: 0px;
+}
+
+table {
+    table-layout: fixed;
+}
