@@ -1,3 +1,7 @@
+:root {
+    --main-color: #f44336
+}
+
 body, h1, h2, h3, h4, h5 {
     font-family: "Poppins", sans-serif
 }
@@ -15,4 +19,15 @@ body {
 
 .w3-half img:hover {
     opacity: 1
+}
+
+.linkSelector:hover {
+    cursor: pointer;
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.selectorDiv {
+    padding: 10px;
+    margin: 10px 0;
 }
