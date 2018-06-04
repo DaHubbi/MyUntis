@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/general.css">
 <link href="css/datepicker.css" rel="stylesheet">
 <script src="js/datepicker.js"></script>
+<script src="js/dateFormat.js"></script>
 
 <body>
 
@@ -66,12 +67,12 @@
             <table class="w3-table w3-bordered">
                 <tr>
                     <th></th>
-                    <th>Montag</th>
-                    <th>Dienstag</th>
-                    <th>Mittwoch</th>
-                    <th>Donnerstag</th>
-                    <th>Freitag</th>
-                    <th>Samstag</th>
+                    <th>Mo. <span id="monday"></span></th>
+                    <th>Di. <span id="thuesday"></span></th>
+                    <th>Mi. <span id="wendnesday"></span></th>
+                    <th>Do. <span id="thursday"></span></th>
+                    <th>Fr. <span id="friday"></span></th>
+                    <th>Sa. <span id="saturday"></span></th>
                 </tr>
                 <tr>
                     <td>
@@ -79,6 +80,8 @@
                             <span>1</span>
                             <span class="bottom">7:55 | 8:45</span>
                         </div>
+                    </td>
+                    <td class="normal">
                     </td>
                 </tr>
                 <tr>
@@ -157,7 +160,7 @@
                     <td>
                         <div class="w3-container table-time">
                             <span>11</span>
-                            <span class="bottom">16:40 | 17:30</span>
+                            <span class="bottom">16:40 | 17:300</span>
                         </div>
                     </td>
                 </tr>

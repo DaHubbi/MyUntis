@@ -52,3 +52,7 @@ table, th, td {
 table {
     table-layout: fixed;
 }
+
+.normal {
+    background-color: #ff887f;
+}
