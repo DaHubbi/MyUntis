@@ -11,6 +11,7 @@
 <link href="css/datepicker.css" rel="stylesheet">
 <script src="js/datepicker.js"></script>
 <script src="js/dateFormat.js"></script>
+<script src="js/general.js"></script>
 
 <body>
 
@@ -48,19 +49,22 @@
         <div class="w3-card selectorDiv">
             <input data-toggle="datepicker" class="w3-input w3-round w3-border" style="width:110px;">
             <br>
-            <span class="linkSelector">102</span>
-            <span class="linkSelector">104</span>
-            <span class="linkSelector">105</span>
-            <span class="linkSelector">106</span>
-            <span class="linkSelector">114</span>
-            <span class="linkSelector">115</span>
-            <span class="linkSelector">116</span>
-            <span class="linkSelector">116a</span>
-            <span class="linkSelector">117</span>
-            <span class="linkSelector">148</span>
-            <span class="linkSelector">C01</span>
-            <span class="linkSelector">202</span>
-            <span class="linkSelector">151</span>
+            <div id="allDataSelector">
+                <span class="linkSelector">102</span>
+                <span class="linkSelector">104</span>
+                <span class="linkSelector">105</span>
+                <span class="linkSelector">106</span>
+                <span class="linkSelector">114</span>
+                <span class="linkSelector">115</span>
+                <span class="linkSelector">116</span>
+                <span class="linkSelector">116a</span>
+                <span class="linkSelector">117</span>
+                <span class="linkSelector">148</span>
+                <span class="linkSelector">C01</span>
+                <span class="linkSelector">202</span>
+                <span class="linkSelector">151</span>
+            </div>
+
         </div>
 
         <div class="w3-responsive w3-card">
@@ -83,10 +87,17 @@
                     </td>
                     <td class="normal lesson">
                         <span class="lessonInfo lessonLeft">4aWI</span>
-                        <span class="lessonInfo lessonRight">LEEB</span>
+                        <span class="lessonInfo lessonRight">BLU</span>
                         <br>
-                        <span class="lessonInfo lessonLeft">AUT</span>
-                        <span class="lessonInfo lessonRight">250</span>
+                        <span class="lessonInfo lessonLeft">D</span>
+                        <span class="lessonInfo lessonRight">102</span>
+                    </td>
+                    <td class="changed lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">--</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">AM</span>
+                        <span class="lessonInfo lessonRight">241</span>
                     </td>
                 </tr>
                 <tr>
@@ -96,12 +107,19 @@
                             <span class="bottom">8:45 | 9:35</span>
                         </div>
                     </td>
-                    <td class="cancelled lesson">
+                    <td class="normal lesson">
                         <span class="lessonInfo lessonLeft">4aWI</span>
-                        <span class="lessonInfo lessonRight">LED</span>
+                        <span class="lessonInfo lessonRight">HAG</span>
                         <br>
-                        <span class="lessonInfo lessonLeft">NWES</span>
-                        <span class="lessonInfo lessonRight">148</span>
+                        <span class="lessonInfo lessonLeft">BET</span>
+                        <span class="lessonInfo lessonRight">102</span>
+                    </td>
+                    <td class="changed lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">---</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">AM</span>
+                        <span class="lessonInfo lessonRight">241</span>
                     </td>
                 </tr>
                 <tr>
@@ -111,12 +129,19 @@
                             <span class="bottom">9:50 | 10:40</span>
                         </div>
                     </td>
-                    <td class="test lesson">
+                    <td class="normal lesson">
                         <span class="lessonInfo lessonLeft">4aWI</span>
-                        <span class="lessonInfo lessonRight">GEI</span>
+                        <span class="lessonInfo lessonRight">WIG</span>
                         <br>
-                        <span class="lessonInfo lessonLeft">AM</span>
-                        <span class="lessonInfo lessonRight">138</span>
+                        <span class="lessonInfo lessonLeft">BSPM</span>
+                        <span class="lessonInfo lessonRight">TS1</span>
+                    </td>
+                    <td class="normal lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">SCE</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">UFW_1</span>
+                        <span class="lessonInfo lessonRight">241</span>
                     </td>
                 </tr>
                 <tr>
@@ -126,12 +151,19 @@
                             <span class="bottom">10:40 | 11:30</span>
                         </div>
                     </td>
-                    <td class="changed lesson">
+                    <td class="normal lesson">
                         <span class="lessonInfo lessonLeft">4aWI</span>
-                        <span class="lessonInfo lessonRight">---</span>
+                        <span class="lessonInfo lessonRight">GEI</span>
                         <br>
-                        <span class="lessonInfo lessonLeft">E</span>
+                        <span class="lessonInfo lessonLeft">AM</span>
                         <span class="lessonInfo lessonRight">250</span>
+                    </td>
+                    <td class="normal lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">BLU</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">D</span>
+                        <span class="lessonInfo lessonRight">102</span>
                     </td>
                 </tr>
                 <tr>
@@ -141,6 +173,13 @@
                             <span class="bottom">11:30 | 12:20</span>
                         </div>
                     </td>
+                    <td class="normal lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">SCE</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">E</span>
+                        <span class="lessonInfo lessonRight">250</span>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -148,6 +187,14 @@
                             <span>6</span>
                             <span class="bottom">12:20 | 13:10</span>
                         </div>
+                    </td>
+                    <td></td>
+                    <td class="cancelled lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">RIED</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">SWP_1</span>
+                        <span class="lessonInfo lessonRight">206</span>
                     </td>
                 </tr>
                 <tr>
@@ -157,6 +204,20 @@
                             <span class="bottom">13:10 | 14:00</span>
                         </div>
                     </td>
+                    <td class="normal lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">SCE</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">UFW_1</span>
+                        <span class="lessonInfo lessonRight">241</span>
+                    </td>
+                    <td class="cancelled lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">RIED</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">SWP_1</span>
+                        <span class="lessonInfo lessonRight">206</span>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -165,6 +226,20 @@
                             <span class="bottom">14:00 | 14:50</span>
                         </div>
                     </td>
+                    <td class="test lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">FLA</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">AUT</span>
+                        <span class="lessonInfo lessonRight">102</span>
+                    </td>
+                    <td class="cancelled lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">RIED</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">SWP_1</span>
+                        <span class="lessonInfo lessonRight">206</span>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -172,6 +247,20 @@
                             <span>9</span>
                             <span class="bottom">15:00 | 15:50</span>
                         </div>
+                    </td>
+                    <td class="cancelled lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">GMD</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">UFW_2</span>
+                        <span class="lessonInfo lessonRight">102</span>
+                    </td>
+                    <td class="cancelled lesson">
+                        <span class="lessonInfo lessonLeft">4aWI</span>
+                        <span class="lessonInfo lessonRight">RIED</span>
+                        <br>
+                        <span class="lessonInfo lessonLeft">SWP_1</span>
+                        <span class="lessonInfo lessonRight">206</span>
                     </td>
                 </tr>
                 <tr>

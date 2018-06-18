@@ -1,23 +1,25 @@
 $(function() {
+    printClassList();
     $("#class").click(function(event) {
         $("#header").html("Klassen");
         $("#tableSelector").html("Klassen");
+        printClassList();
     });
     $("#teachers").click(function(event) {
         $("#header").html("Lehrer");
         $("#tableSelector").html("Lehrer");
+        printTeacherList();
     });
     $("#rooms").click(function(event) {
         $("#header").html("Räume");
         $("#tableSelector").html("Räume");
+        printRoomList();
     });
 
     displayDate();
     $('body').click(function(event) {
         displayDate();
     });
-
-
 
 });
 
@@ -138,4 +140,70 @@ function displayDate() {
         default:
 
     }
+}
+
+function printRoomList() {
+    $.ajax({
+        method: "GET",
+        crossDomain: true,
+        dataType: 'json',
+        url: "http://localhost:8080/api/room/all",
+        beforeSend: function() {
+            $("#allDataSelector").html("<span>Loading</span>");
+        },
+        success: function(data) {
+            var output = "";
+            $.each(data, function(id, obj) {
+                output += "<span class='linkSelector'>" + obj.name + "</span> ";
+            });
+            $("#allDataSelector").html(output);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+function printTeacherList() {
+    $.ajax({
+        method: "GET",
+        crossDomain: true,
+        dataType: 'json',
+        url: "http://localhost:8080/api/teacher/all",
+        beforeSend: function() {
+            $("#allDataSelector").html("<span>Loading</span>");
+        },
+        success: function(data) {
+            var output = "";
+            $.each(data, function(id, obj) {
+                output += "<span class='linkSelector'>" + obj.name + "</span> ";
+            });
+            $("#allDataSelector").html(output);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
+}
+
+function printClassList() {
+    $.ajax({
+        method: "GET",
+        crossDomain: true,
+        dataType: 'json',
+        url: "http://localhost:8080/api/klasse/all",
+        beforeSend: function() {
+            $("#allDataSelector").html("<span>Loading</span>");
+        },
+        success: function(data) {
+            var output = "";
+            $.each(data, function(id, obj) {
+                output += "<span class='linkSelector'>" + obj.name + "</span> ";
+            });
+            $("#allDataSelector").html(output);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR, textStatus, errorThrown);
+        }
+    });
 }

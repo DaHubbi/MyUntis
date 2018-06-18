@@ -61,6 +61,9 @@ table {
 
 .cancelled {
     background-color: #a0a0a0;
+}
+
+.cancelled .lessonInfo {
     text-decoration: line-through;
     text-decoration-style: solid;
 }
