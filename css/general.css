@@ -1,5 +1,5 @@
 :root {
-    --main-color: #f44336
+    --red: #f44336
 }
 
 body, h1, h2, h3, h4, h5 {
@@ -23,7 +23,7 @@ body {
 
 .linkSelector:hover {
     cursor: pointer;
-    color: var(--main-color);
+    color: var(--red);
     text-decoration: underline;
 }
 
@@ -35,7 +35,6 @@ body {
 table, th, td {
     border: 1px solid #dddddd;
     border-collapse: collapse;
-    padding: 0px;
 }
 
 .bottom {
@@ -51,8 +50,48 @@ table, th, td {
 
 table {
     table-layout: fixed;
+    cell
 }
+
+/* Lesson Design*/
 
 .normal {
     background-color: #ff887f;
+}
+
+.cancelled {
+    background-color: #a0a0a0;
+    text-decoration: line-through;
+    text-decoration-style: solid;
+}
+
+.test {
+    background-color: #cfdb53;
+}
+
+.changed {
+    background-color: #b225b0;
+}
+
+.lesson {
+    display: block;
+    font-size: 11px;
+    padding: 0px;
+    margin: 5px;
+}
+
+.lessonRight {
+    float: right;
+    margin-right: 20px;
+    padding: 0px;
+}
+
+.lessonLeft {
+    float: left;
+    margin-left: 20px;
+    padding: 0px;
+}
+
+.w3-table td {
+    padding: 2px;
 }
